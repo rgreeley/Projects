@@ -9,9 +9,7 @@ import java.util.Random;
 				Random r = new Random();
 				Scanner keyboard = new Scanner(System.in);
 
-				String userName, dealerName;
-				String playAgain;
-				String choice;
+				String userName, dealerName, playAgain, choice;
 
 						System.out.println( "Time to play some BLACKJACK!!!\n" );
 						System.out.print( "May I ask who will be playing with us this fine day?\n" );
@@ -24,10 +22,7 @@ import java.util.Random;
 						System.out.println( "So we have our player " + userName + " playing our dealer " + dealerName + ".\n" );
 						System.out.println( "Let's get this party started!!!\n" );
 						
-				int userCard1, userCard2;
-				int dealerCard1, dealerCard2;
-				int newCard;
-				int userHand, dealerHand;
+				int userCard1, userCard2, dealerCard1, dealerCard2, userHand, dealerHand, newCard;
 				int bank = 200, bet;
 
 					do
@@ -48,13 +43,8 @@ import java.util.Random;
 					}	 
 							while ( bet < 1 || bet > 100 || bet > bank || bet % 1 != 0);
 					
-				userCard1 = 2 + r.nextInt(10);
-				userCard2 = 2 + r.nextInt(10);
-				userHand = userCard1 + userCard2;
-				
-				dealerCard1 = 2 + r.nextInt(10);
-				dealerCard2 = 2 + r.nextInt(10);
-				dealerHand = dealerCard1 + dealerCard2;
+				userCard1 = 2 + r.nextInt(10), userCard2 = 2 + r.nextInt(10), userHand = userCard1 + userCard2;
+				dealerCard1 = 2 + r.nextInt(10), dealerCard2 = 2 + r.nextInt(10), dealerHand = dealerCard1 + dealerCard2;
 
 				System.out.println( "\nSo, " + userName + " here is your hand, " + userCard1 + " and " + userCard2 + "." );
 				System.out.println( "Your total hand is " + userHand + ".\n" );
