@@ -38,8 +38,8 @@ import java.util.Random;
 
 						bet = keyboard.nextInt();
 
-							if ( bet < 1 || bet > 100 || bet > bank || bet % 1 != 0)
-								System.out.println( "You cannot bet $" + bet + ". Please try again." );
+							if ( bet < 1 || bet > 200 || bet > bank || bet % 1 != 0)
+								System.out.println( "You cannot make that bet $" + bet + ". How about another..." );
 					}	 
 							while ( bet < 1 || bet > 100 || bet > bank || bet % 1 != 0);
 					
@@ -113,7 +113,7 @@ import java.util.Random;
 									System.out.println ( "Good go!!! You win!!!" );
 									bank += bet;
 								}
-								 else if ( dealerHand > 21)
+								else if ( dealerHand > 21)
 								{
 									System.out.println( "Looks like " + dealerName + " has busted!!! YOU WIN!!!" );
 									bank += bet;
