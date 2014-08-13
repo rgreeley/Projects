@@ -43,8 +43,8 @@ import java.util.Random;
 					}	 
 							while ( bet < 1 || bet > 100 || bet > bank || bet % 1 != 0);
 					
-				userCard1 = 2 + r.nextInt(10), userCard2 = 2 + r.nextInt(10), userHand = userCard1 + userCard2;
-				dealerCard1 = 2 + r.nextInt(10), dealerCard2 = 2 + r.nextInt(10), dealerHand = dealerCard1 + dealerCard2;
+				userCard1 = 2 + r.nextInt(10); userCard2 = 2 + r.nextInt(10); userHand = userCard1 + userCard2;
+				dealerCard1 = 2 + r.nextInt(10); dealerCard2 = 2 + r.nextInt(10); dealerHand = dealerCard1 + dealerCard2;
 
 				System.out.println( "\nSo, " + userName + " here is your hand, " + userCard1 + " and " + userCard2 + "." );
 				System.out.println( "Your total hand is " + userHand + ".\n" );
