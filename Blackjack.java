@@ -101,64 +101,40 @@ import java.util.Random;
 								System.out.println( dealerName + " hand is " + dealerHand + "." );
 								System.out.println( "Your hand is " + userHand + ".\n" );
 
-							if ( userHand <= 21 )
-							{
 							
-							if ( dealerHand <= 21 )
-							{
-							
-							if ( userHand > 21 )
-							{
-							
-							if ( dealerHand > 21)
-							{
-							
-							if ( userHand > dealerHand )
-							{
-									System.out.println( "And we have ourselves a winner!!!!" );
+						
+								if ( userHand > 21 )
+								{
+									System.out.println( "Looks like this one is a bust. Sorry my friend." );
+									bank -= bet;
+								}
+								else if ( userHand > dealerHand )
+								{
+									System.out.println ( "Good go!!! You win!!!" );
 									bank += bet;
 								}
-
+								 else if ( dealerHand > 21)
+								{
+									System.out.println( "Looks like " + dealerName + " has busted!!! YOU WIN!!!" );
+									bank += bet;
+								}
 								else if ( userHand == dealerHand )
 								{
 									System.out.println( "It's a draw." );
 									System.out.println( "Good thing we always side on the player!!!");
 									bank += bet;
 								}
-								
-								else
+								else if ( dealerHand <= 21 )
 								{
 									System.out.println( "Sorry my friend. Looks like its not your night." );
 									bank -= bet;
 								}
-								
-							}
-								else
+								else if ( userHand <= 21 )
 								{
 									System.out.println( "And we have ourselves a winner!!!!" );
 									bank += bet;
 								}
 								
-							}
-								else
-								{
-									System.out.println( "Sorry my friend. Looks like its not your night." );
-									bank -= bet;		
-								}
-								
-							}	
-								else
-								{
-									System.out.println( "Looks like this one is a bust. Sorry my friend." );
-									bank -= bet;
-								}
-								
-							}	
-								else
-								{
-									System.out.println( "Looks like " + dealerName + " has busted!!! YOU WIN!!!" );
-									bank += bet;
-								}
 									if ( bank <= 0 )
 								{
 
@@ -166,10 +142,10 @@ import java.util.Random;
 									break;
 								}
 									System.out.println ("Your current funds are at " + bank + "." );
-									System.out.print( "Want another go??? (y/n)? " );
+									System.out.print( "Want another go??? (yay or nay)? " );
 									playAgain = keyboard.next();
 								
-						}while (! playAgain.equals("n") );
+						}while (! playAgain.equals("nay") );
 							System.out.println("Guess we will see you next time!" );
 			}
 }
