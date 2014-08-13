@@ -47,22 +47,22 @@ import java.util.Random;
 				dealerCard1 = 2 + r.nextInt(10); dealerCard2 = 2 + r.nextInt(10); dealerHand = dealerCard1 + dealerCard2;
 
 				System.out.println( "\nSo, " + userName + " here is your hand, " + userCard1 + " and " + userCard2 + "." );
-				System.out.println( "Your total hand is " + userHand + ".\n" );
+				System.out.println( "Your hands total is " + userHand + ".\n" );
 				System.out.println( dealerName + "'s hand is " + dealerCard1 + " but he is only showing the one card." );
 
 					do
 					{
-						System.out.print( "What would you like to do: \"hit\" or \"stay\"? " );
+						System.out.print( "Time to make a choice: \"hit\" or \"stay\"? " );
 						choice = keyboard.next();
 						
 							if ( choice.equals("hit") )
 							{
 
 								newCard = 2 + r.nextInt(10);
-								System.out.println( "Your new card is " + newCard + "." );
+								System.out.println( "Here is your new card " + newCard + "." );
 							
 								userHand += newCard;
-								System.out.println( "Your total is " + userHand + ".\n" );
+								System.out.println( "Your new hand is " + userHand + ".\n" );
 							}
 							
 					}while ( userHand <= 21 && (! choice.equals("stay") ) );
@@ -79,13 +79,13 @@ import java.util.Random;
 							if ( dealerHand < 16 )
 							{
 								choice = "hit";
-									System.out.println( dealerName + " will now hit." );
+									System.out.println( dealerName + " hits!" );
 
 								newCard = 2 + r.nextInt(10);
 									System.out.println( dealerName + "'s new card is " + newCard + "." );
 
 								dealerHand += newCard;
-									System.out.println( dealerName +"'s total is " + dealerHand + ".\n" );
+									System.out.println( dealerName +"'s new hand is " + dealerHand + ".\n" );
 							}
 						
 							else
@@ -98,8 +98,8 @@ import java.util.Random;
 					
 							}
 
-								System.out.println( dealerName + " total is " + dealerHand + "." );
-								System.out.println( "Your total is " + userHand + ".\n" );
+								System.out.println( dealerName + " hand is " + dealerHand + "." );
+								System.out.println( "Your hand is " + userHand + ".\n" );
 
 							if ( userHand <= 21 )
 							{
